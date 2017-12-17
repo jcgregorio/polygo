@@ -1,15 +1,26 @@
 {
-  "name": "polymer-starter-kit",
-  "license": "BSD-3-Clause",
+  "name": "polygo",
+  "version": "1.0.0",
+  "description": "A Polymer+Go skeleton application.",
+  "main": "index.js",
+  "dependencies": {
+    "vulcanize": "^1.16.0"
+  },
   "devDependencies": {
-    "eslint": "^3.19.0",
-    "eslint-config-google": "^0.7.0",
-    "eslint-plugin-html": "^2.0.0"
+    "html-minifier": "^3.5.7",
+    "vulcanize": "^1.16.0"
   },
   "scripts": {
-    "lint": "npm run lint:javascript && polymer lint",
-    "lint:javascript": "eslint . --ext js,html --ignore-path .gitignore",
-    "test": "polymer test",
-    "test:integration": "polymer build # test that psk builds without error with the CLI"
-  }
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcgregorio/polygo.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jcgregorio/polygo/issues"
+  },
+  "homepage": "https://github.com/jcgregorio/polygo#readme"
 }
