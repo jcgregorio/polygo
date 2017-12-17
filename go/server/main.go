@@ -31,7 +31,7 @@ func makeResourceHandler() func(http.ResponseWriter, *http.Request) {
 
 func loadTemplates() {
 	templates = template.Must(template.New("").ParseFiles(
-		filepath.Join(*resourcesDir, "templates/index.html"),
+		filepath.Join(*resourcesDir, "res/index.html"),
 	))
 }
 
