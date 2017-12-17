@@ -1,7 +1,7 @@
 
 BOWER_DIR=res/bower_components
 
-default: elements_html
+default: node_modules/lastupdate elements_html
 	go install -v ./go/server
 
 
@@ -29,8 +29,6 @@ res/vul/elements.html: res/imp/*.html elements.html ./node_modules/.bin/vulcaniz
 
 clean_webtools:
 	-rm res/vul/elements.html
-	-rm res/js/core.js
-	-rm res/js/core-debug.js
 
 #### Rules to npm install needed tools ####
 
