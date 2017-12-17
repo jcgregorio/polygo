@@ -1,10 +1,10 @@
 
 BOWER_DIR=res/bower_components
 
-default: res/vul/elements.html
+default: tools res/vul/elements.html
 	go install -v ./go/server
 
-toos: $(BOWER_DIR)/lastupdate node_modules/lastupdate
+tools: $(BOWER_DIR)/lastupdate node_modules/lastupdate
 
 $(BOWER_DIR)/lastupdate: bower.json ./node_modules/.bin/bower
 	./node_modules/.bin/bower update
