@@ -44,7 +44,7 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 		loadTemplates()
 	}
 	data := IndexData{
-		Name: "World",
+		Name: "Skeleton App",
 	}
 	if err := templates.ExecuteTemplate(w, "index.html", data); err != nil {
 		glog.Errorf("Failed to expand template: %s", err)
@@ -53,16 +53,15 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	flag.Parse()
-	glog.Infof("Hello World!")
 
 	// Resources are served directly.
 	router := mux.NewRouter()
 	router.PathPrefix("/res/").HandlerFunc(makeResourceHandler())
 
-	// Handlers.
+	// Add page handlers here.
 	router.HandleFunc("/", indexHandler)
 
 	http.Handle("/", router)
-
+	glog.Infof("Server is running at: http://localhost%s", *port)
 	glog.Fatal(http.ListenAndServe(*port, nil))
 }
